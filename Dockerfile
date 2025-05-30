@@ -5,6 +5,8 @@ WORKDIR /usr/app
 COPY ./package.json .
 COPY ./yarn.lock .
 
+RUN apk add --no-cache curl
+
 ENV NODE_ENV production
 ENV REDIS_HOST localhost
 ENV REDIS_PORT 6379
